@@ -1,0 +1,36 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #388DF5;
+  color: #FFFFFF; /* This sets the text color of the button to white */
+  border: none; /* This removes the default border */
+  border-radius: 4px; /* Optional: This gives the button rounded corners */
+  padding: 10px 20px; /* This provides some padding to the button */
+  cursor: pointer; /* This changes the cursor to a hand when hovering over the button */
+  transition: background-color 0.3s; /* Optional: This adds a smooth transition effect when the button is hovered */
+}
+
+button:hover {
+  background-color: #2a6dbd; /* This changes the button color slightly when hovered */
+}
