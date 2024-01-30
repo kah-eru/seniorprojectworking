@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Sign } from 'crypto';
+import Loginbutton from './Components/LoginButton';
+import { Home } from '@mui/icons-material';
 
 function App() {
   const [reps, setReps] = useState<number | ''>('');
@@ -22,7 +25,9 @@ function App() {
   
 
   return (
+    
     <div className="App">
+      
       <h1>Next Set</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -41,6 +46,8 @@ function App() {
       </form>
       {nextWeight && <p>Next set weight: {nextWeight} lb</p>}
     </div>
+    
+    
   );
 }
 

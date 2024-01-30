@@ -10,9 +10,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import SignIn from './Signin';
+import { Link } from 'react-router-dom'
 
 const pages = ['Workouts', 'Progression'];
-const settings = ['Profile', 'Logout'];
+const settings = ['Profile', 'Login'];
 
 interface NavBarProps {
   onNavigateBack: () => void;
@@ -42,6 +44,7 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
     <AppBar sx={{ backgroundColor: '#2A2A2A' }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+
           <IconButton
             size="large"
             aria-label="menu"
@@ -71,6 +74,7 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
           >
             Fitness App
           </Typography>
+          
 
           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
             <Tooltip title="Open settings">
@@ -100,9 +104,9 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+                ))}
             </Menu>
           </Box>
         </Toolbar>

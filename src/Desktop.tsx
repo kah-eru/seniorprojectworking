@@ -3,6 +3,9 @@ import Workout from "./Components/Cards";
 import NavBar from "./Components/NavBar";
 import WorkoutDetails from "./Components/WorkoutDetails";
 import WorkoutPlan from "./Components/WorkoutPlans"; // Updated import
+import Loginbutton from "./Components/LoginButton";
+import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 
 const Desktop: React.FC = () => {
   const [showWorkoutPlan, setShowWorkoutPlan] = useState(true); // Set to true initially
@@ -52,7 +55,11 @@ const Desktop: React.FC = () => {
   };
 
   return (
+    
     <div>
+      
+    
+
       <NavBar onNavigateBack={navigateBackToDesktop} />
       {showWorkoutPlan ? (
         <WorkoutPlan workouts={workoutPlanData.workouts} onStartWorkout={handleStartWorkout} />
@@ -63,8 +70,10 @@ const Desktop: React.FC = () => {
           {workoutData.map((workout) => (
             <Workout key={workout.id} {...workout} onClickPlan={() => navigateToWorkoutPlan()} />
           ))}
+          
         </div>
       )}
+      
     </div>
   );
 };
