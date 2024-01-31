@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import SignIn from './Signin';
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 const pages = ['Workouts', 'Progression'];
 const settings = ['Profile', 'Login'];
@@ -23,6 +24,8 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [currentPage, setShowProgressionPage] = useState('');
+  const [progressionContentVisible, setProgressionContentVisible] = useState(false);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -55,6 +58,9 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
             sx={{ display: { xs: 'flex', md: 'flex', lg: 'flex' } }}
           >
             <MenuIcon />
+            
+
+
           </IconButton>
 
           <Typography
