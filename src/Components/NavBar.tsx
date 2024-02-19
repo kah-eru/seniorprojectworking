@@ -13,6 +13,8 @@ import * as React from 'react';
 import SignIn from './Signin';
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import { Button } from '@mui/material';
+import LineChartsComponent from './Charts';
 
 const pages = ['Workouts', 'Progression'];
 const settings = ['Profile', 'Login'];
@@ -143,6 +145,7 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigateBack }) => {
           ))}
         </Menu>
       </Container>
+      
     </AppBar>
   );
 };

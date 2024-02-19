@@ -1,5 +1,6 @@
 import { Button, Container, Typography } from '@mui/material';
 import React from 'react';
+import LineChartsComponent from './Charts';
 
 interface WorkoutDetailsProps {
   workoutName: string;
@@ -56,7 +57,7 @@ const WorkoutDetails: React.FC<WorkoutDetailsProps> = ({
       <Typography variant="body1" color="white" paragraph>
         {`${workoutReps} reps / ${workoutSets} sets`}
       </Typography>
-
+      
       <Button
         variant="contained"
         size="large"
@@ -75,6 +76,8 @@ const WorkoutDetails: React.FC<WorkoutDetailsProps> = ({
       >
         {workoutIndex < totalWorkouts - 1 ? 'Next Exercise' : 'Back to Workouts'}
       </Button>
+
+      
     </Container>
   );
 };
